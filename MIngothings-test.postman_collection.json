@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "f6fae03f-0809-47a4-a607-7f9c0c9f5fc0",
+		"name": "MIngothings-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23487088",
+		"_collection_link": "https://nebula-web.postman.co/workspace/Nebula-web~7c4ae68f-9c49-4647-8ed0-619863600b72/collection/23487088-f6fae03f-0809-47a4-a607-7f9c0c9f5fc0?action=share&source=collection_link&creator=23487088"
+	},
+	"item": [
+		{
+			"name": "things/routes",
+			"item": [
+				{
+					"name": "create-device",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Save the created device ID into a collection variable\r",
+									"const responseData = pm.response.json();\r",
+									"if (responseData.data && responseData.data._id) {\r",
+									"    pm.collectionVariables.set(\"thing_id\", responseData.data._id);\r",
+									"    console.log(\"✅ Device ID saved to collection variable:\", responseData.data._id);\r",
+									"} else {\r",
+									"    console.warn(\"⚠️ Device ID not found in response.\");\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"name\": \"Fridge X\",\r\n    \"refrigerantType\": \"{{lastRefrigerantId}}\",\r\n    \"capacity\": 25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}things",
+							"host": [
+								"{{baseUrl}}things"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "// GET /api/things/:thing_id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}things/{{thing_id}}",
+							"host": [
+								"{{baseUrl}}things"
+							],
+							"path": [
+								"{{thing_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "// POST /api/things/:thing_id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"lowPressure\": 1.4,\r\n  \"suctionTemp\": 11,\r\n  \"highPressure\": 16,\r\n  \"liquidPressure\": 19,\r\n  \"liquidTemp\": 33.5,\r\n  \"lowTemp\": 7,\r\n  \"highTemp\": 55\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}things/{{thing_id}}",
+							"host": [
+								"{{baseUrl}}things"
+							],
+							"path": [
+								"{{thing_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "// GET /api/things/:thing_id/:variable",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}things/{{thing_id}}/:variable",
+							"host": [
+								"{{baseUrl}}things"
+							],
+							"path": [
+								"{{thing_id}}",
+								":variable"
+							],
+							"variable": [
+								{
+									"key": "variable",
+									"value": "",
+									"description": "year to filter"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Gett al devices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}things",
+							"host": [
+								"{{baseUrl}}things"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Refrigerants",
+			"item": [
+				{
+					"name": "// GET /api/refrigerants",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let response = pm.response.json();\r",
+									"\r",
+									"if (Array.isArray(response.data) && response.data.length > 0) {\r",
+									"    let last = response.data[response.data.length - 1];\r",
+									"    pm.collectionVariables.set(\"lastRefrigerantId\", last._id);\r",
+									"    console.log(\"Saved lastRefrigerantId to collection variables:\", last._id);\r",
+									"} else {\r",
+									"    console.warn(\"No refrigerants found in response.\");\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}refrigerants",
+							"host": [
+								"{{baseUrl}}refrigerants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /api/refrigerants",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"name\": \"R290\",\r\n  \"ptFactor\": 1.55,\r\n  \"ptOffset\": 19\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}refrigerants",
+							"host": [
+								"{{baseUrl}}refrigerants"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8000/",
+			"type": "string"
+		},
+		{
+			"key": "thing_id",
+			"value": ""
+		},
+		{
+			"key": "lastRefrigerantId",
+			"value": ""
+		}
+	]
+}
