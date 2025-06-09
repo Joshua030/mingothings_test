@@ -68,3 +68,8 @@ if (process.argv[2] === '--import') importData();
 else if (process.argv[2] === '--delete') deleteData();
 
 console.log('process.argv:', process.argv);
+
+/**Run the delete and import proccess from shell */
+
+// node ./dev-data/data/import-dev-data.js --delete
+//node ./dev-data/data/import-dev-data.js --import

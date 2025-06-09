@@ -15,7 +15,7 @@ const telemetrySchema = new mongoose.Schema({
   // Computed values
   superheat:      { type: Number },
   subcool:        { type: Number }
-}, { _id: false });
+}, { _id: false,  timestamps: true  });
 
 
 // ───── MAIN REFRIGERATOR SCHEMA ─────

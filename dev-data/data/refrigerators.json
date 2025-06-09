@@ -4,13 +4,16 @@
     "refrigerantType": "R134a",
     "capacity": 25,
     "telemetry": [
-      {
-        "lowPressure": 1.2,
-        "suctionTemp": 10,
-        "highPressure": 15,
-        "liquidPressure": 18,
-        "liquidTemp": 32
-      }
+      { "lowPressure": 1.2, "suctionTemp": 10, "highPressure": 15, "liquidPressure": 18, "liquidTemp": 32, "createdAt": "2022-01-10T08:00:00.000Z" },
+      { "lowPressure": 1.3, "suctionTemp": 11, "highPressure": 15.5, "liquidPressure": 18.2, "liquidTemp": 31, "createdAt": "2022-03-12T09:30:00.000Z" },
+      { "lowPressure": 1.1, "suctionTemp": 9, "highPressure": 14.5, "liquidPressure": 17.8, "liquidTemp": 30, "createdAt": "2022-05-15T10:15:00.000Z" },
+      { "lowPressure": 1.4, "suctionTemp": 12, "highPressure": 16, "liquidPressure": 19, "liquidTemp": 33, "createdAt": "2022-07-20T11:45:00.000Z" },
+      { "lowPressure": 1.2, "suctionTemp": 10.5, "highPressure": 15.2, "liquidPressure": 18.1, "liquidTemp": 32.5, "createdAt": "2022-09-25T13:00:00.000Z" },
+      { "lowPressure": 1.3, "suctionTemp": 11.2, "highPressure": 15.8, "liquidPressure": 18.6, "liquidTemp": 33.1, "createdAt": "2023-01-10T14:30:00.000Z" },
+      { "lowPressure": 1.5, "suctionTemp": 12.5, "highPressure": 16.2, "liquidPressure": 19.3, "liquidTemp": 34.2, "createdAt": "2023-03-05T16:00:00.000Z" },
+      { "lowPressure": 1.1, "suctionTemp": 9.8, "highPressure": 14.7, "liquidPressure": 17.9, "liquidTemp": 31.5, "createdAt": "2023-05-18T17:30:00.000Z" },
+      { "lowPressure": 1.2, "suctionTemp": 10.3, "highPressure": 15.1, "liquidPressure": 18.0, "liquidTemp": 32.2, "createdAt": "2023-07-09T19:00:00.000Z" },
+      { "lowPressure": 1.4, "suctionTemp": 11.5, "highPressure": 15.9, "liquidPressure": 18.9, "liquidTemp": 33.6, "createdAt": "2023-09-28T20:30:00.000Z" }
     ]
   },
   {
@@ -18,13 +21,16 @@
     "refrigerantType": "R410A",
     "capacity": 30,
     "telemetry": [
-      {
-        "lowPressure": 1.6,
-        "suctionTemp": 12,
-        "highPressure": 18,
-        "liquidPressure": 20,
-        "liquidTemp": 34
-      }
+      { "lowPressure": 1.6, "suctionTemp": 12, "highPressure": 18, "liquidPressure": 20, "liquidTemp": 34, "createdAt": "2022-01-05T08:45:00.000Z" },
+      { "lowPressure": 1.7, "suctionTemp": 13, "highPressure": 18.2, "liquidPressure": 20.5, "liquidTemp": 34.5, "createdAt": "2022-03-10T09:50:00.000Z" },
+      { "lowPressure": 1.5, "suctionTemp": 11.8, "highPressure": 17.5, "liquidPressure": 19.8, "liquidTemp": 33.2, "createdAt": "2022-05-12T10:30:00.000Z" },
+      { "lowPressure": 1.8, "suctionTemp": 13.5, "highPressure": 18.6, "liquidPressure": 20.7, "liquidTemp": 34.9, "createdAt": "2022-07-18T11:15:00.000Z" },
+      { "lowPressure": 1.6, "suctionTemp": 12.3, "highPressure": 18.1, "liquidPressure": 20.2, "liquidTemp": 34.0, "createdAt": "2022-09-22T12:00:00.000Z" },
+      { "lowPressure": 1.7, "suctionTemp": 13.1, "highPressure": 18.4, "liquidPressure": 20.6, "liquidTemp": 34.8, "createdAt": "2023-01-30T14:10:00.000Z" },
+      { "lowPressure": 1.9, "suctionTemp": 14, "highPressure": 19, "liquidPressure": 21, "liquidTemp": 35, "createdAt": "2023-03-17T15:30:00.000Z" },
+      { "lowPressure": 1.5, "suctionTemp": 11.9, "highPressure": 17.7, "liquidPressure": 19.7, "liquidTemp": 33.5, "createdAt": "2023-06-25T16:50:00.000Z" },
+      { "lowPressure": 1.6, "suctionTemp": 12.6, "highPressure": 18.3, "liquidPressure": 20.3, "liquidTemp": 34.3, "createdAt": "2023-08-14T18:10:00.000Z" },
+      { "lowPressure": 1.8, "suctionTemp": 13.8, "highPressure": 18.9, "liquidPressure": 20.9, "liquidTemp": 35.1, "createdAt": "2023-10-20T19:30:00.000Z" }
     ]
   }
 ]
