@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Fridge A",
+    "refrigerantType": "R134a",
+    "capacity": 25,
+    "telemetry": [
+      {
+        "lowPressure": 1.2,
+        "suctionTemp": 10,
+        "highPressure": 15,
+        "liquidPressure": 18,
+        "liquidTemp": 32
+      }
+    ]
+  },
+  {
+    "name": "Fridge B",
+    "refrigerantType": "R410A",
+    "capacity": 30,
+    "telemetry": [
+      {
+        "lowPressure": 1.6,
+        "suctionTemp": 12,
+        "highPressure": 18,
+        "liquidPressure": 20,
+        "liquidTemp": 34
+      }
+    ]
+  }
+]

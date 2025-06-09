@@ -1,0 +1,5 @@
+[
+  { "name": "R134a", "ptFactor": 1.5, "ptOffset": 20 },
+  { "name": "R410A", "ptFactor": 1.8, "ptOffset": 25 },
+  { "name": "R404A", "ptFactor": 1.6, "ptOffset": 15 }
+]
