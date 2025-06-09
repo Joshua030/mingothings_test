@@ -1,6 +1,7 @@
 const express = require('express');
 
 const thingRouter = require('./routes/thingRoutes');
+const refrigerantRouter  = require('./routes/refrigerantRoutes');
 const AppError          = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const app = express();
@@ -11,6 +12,7 @@ app.use(express.json());
 
 // 2) ROUTES
 app.use('/api/things', thingRouter);
+app.use('/api/refrigerants', refrigerantRouter);
 
 
 
