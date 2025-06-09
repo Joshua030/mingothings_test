@@ -6,6 +6,7 @@ const router = express.Router();
 
 router
   .route('/')
+  .get(thingController.getAllThings)
   .post(thingController.createThing)
 
 router

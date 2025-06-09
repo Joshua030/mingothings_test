@@ -11,6 +11,17 @@ exports.createThing = catchAsync(async (req, res, next) => {
   });
 });
 
+// GET /api/things
+exports.getAllThings = catchAsync(async (req, res, next) => {
+  const fridges = await Refrigerator.find({}, 'name refrigerantType capacity').populate('refrigerantType', 'name'); ;
+  res.status(200).json({
+    status: 'success',
+    results: fridges.length,
+    data: fridges
+  });
+});
+
+
 // GET /api/things/:thing_id
 exports.getThing = catchAsync(async (req, res, next) => {
   const fridge = await Refrigerator.findById(req.params.thing_id).populate('refrigerantType');
